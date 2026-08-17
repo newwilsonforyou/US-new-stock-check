@@ -89,23 +89,69 @@ def fetch(url, tries=3, sleep=2):
 
 
 # ---------------------------------------------------------------- Yahoo 報價
-def quote(ticker):
-    """回傳 dict: price, high52, low52, currency, first_close(上市首日收市)"""
-    url = (f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}"
+def _quote_yahoo(ticker, host):
+    url = (f"https://{host}/v8/finance/chart/{ticker}"
            f"?range=2y&interval=1d")
-    data = json.loads(fetch(url))
+    data = json.loads(fetch(url, tries=2, sleep=3))
     res = (data.get("chart") or {}).get("result")
     if not res:
-        raise ValueError(f"{ticker}: Yahoo 冇資料")
+        raise ValueError("Yahoo 冇資料")
     meta = res[0]["meta"]
     closes = [c for c in (res[0]["indicators"]["quote"][0].get("close") or []) if c]
+    if not meta.get("regularMarketPrice"):
+        raise ValueError("Yahoo 冇報價")
     return {
         "price": meta.get("regularMarketPrice"),
         "high52": meta.get("fiftyTwoWeekHigh"),
         "low52": meta.get("fiftyTwoWeekLow"),
         "currency": meta.get("currency", "USD"),
         "first_close": closes[0] if closes else None,
+        "source": "yahoo",
     }
+
+
+def _quote_stooq(ticker):
+    """後備source: Stooq 日線 CSV, 唔會封 datacenter IP"""
+    url = f"https://stooq.com/q/d/l/?s={ticker.lower()}.us&i=d"
+    txt = fetch(url, tries=2, sleep=2)
+    lines = [l for l in txt.strip().splitlines() if l and l[0].isdigit()]
+    if not lines:
+        raise ValueError("Stooq 冇資料")
+    rows = []
+    for l in lines:
+        p = l.split(",")
+        if len(p) >= 5:
+            try:
+                rows.append((p[0], float(p[2]), float(p[4])))   # date, high, close
+            except ValueError:
+                pass
+    if not rows:
+        raise ValueError("Stooq 資料格式唔啱")
+    cutoff = (date.today().toordinal() - 365)
+    last_year = [r for r in rows
+                 if datetime.strptime(r[0], "%Y-%m-%d").date().toordinal() >= cutoff]
+    return {
+        "price": rows[-1][2],
+        "high52": max(r[1] for r in (last_year or rows)),
+        "low52": None,
+        "currency": "USD",
+        "first_close": rows[0][2],
+        "source": "stooq",
+    }
+
+
+def quote(ticker):
+    """依次試 Yahoo query1 / query2 / Stooq, 全部失敗就拋出最後一個錯"""
+    errs = []
+    for fn, label in ((lambda: _quote_yahoo(ticker, "query1.finance.yahoo.com"), "y1"),
+                      (lambda: _quote_yahoo(ticker, "query2.finance.yahoo.com"), "y2"),
+                      (lambda: _quote_stooq(ticker), "stooq")):
+        try:
+            return fn()
+        except Exception as e:      # noqa: BLE001
+            errs.append(f"{label}:{type(e).__name__}"
+                        f"{getattr(e, 'code', '') and ' ' + str(e.code)}")
+    raise ValueError(" / ".join(errs))
 
 
 def profile(ticker):
@@ -135,12 +181,28 @@ def _cells(row_html):
             for c in CELL_RE.findall(row_html)]
 
 
+HEADER_WORDS = {"date", "ipo date", "symbol", "parent", "new stock", "company",
+                "company name", "parent company", "new company", "ipo price",
+                "current", "return", "ratio", "ticker"}
+
+
+def _looks_like_header(cells):
+    lowered = [c.strip().lower() for c in cells[:6]]
+    return sum(1 for c in lowered if c in HEADER_WORDS) >= 2
+
+
 def parse_table(html):
     out = []
     for row in ROW_RE.findall(html):
         c = _cells(row)
-        if len(c) >= 4 and c[0] and c[0][0].isalpha():
-            out.append(c)
+        if len(c) < 4 or not c[0]:
+            continue
+        if _looks_like_header(c):          # 跳過表頭, 唔好當佢係一隻股
+            continue
+        if not re.match(r"^[A-Za-z]{1,6}$", c[1].strip()) and \
+           not re.match(r"^[A-Z][a-z]{2}\s+\d", c[0].strip()):
+            continue                        # 第一格唔似日期, 第二格唔似代號 -> 唔要
+        out.append(c)
     return out
 
 
@@ -248,13 +310,14 @@ def check(write_report=True):
             q = quote(t)
         except Exception as e:      # noqa: BLE001
             print(f"[warn] {t}: {e}", file=sys.stderr)
+            err = f"NO DATA ({e})"[:60]
             rows.append(dict(ticker=t, name=item["name"], parent=item["parent"],
                              type=item["type"], list_date=item.get("list_date", ""),
                              sector=item.get("sector", "?"),
                              industry=item.get("industry", "?"),
                              ref=item.get("ref_price"), ref_note="",
                              price=None, high52=None, vs_ref=None,
-                             vs_high=None, flags="NO DATA"))
+                             vs_high=None, flags=err))
             continue
 
         # 板塊只查一次, 之後 cache 落 watchlist
@@ -292,6 +355,7 @@ def check(write_report=True):
                          industry=item.get("industry", "?"),
                          ref=ref, ref_note=item.get("ref_note", "招股價"),
                          price=price, high52=high52,
+                         source=q.get("source", ""),
                          vs_ref=vs_ref, vs_high=vs_high, flags=", ".join(flags) or "—"))
 
     if dirty:
