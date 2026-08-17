@@ -327,7 +327,7 @@ def check(write_report=True):
                 item["sector"], item["industry"] = s, ind
                 dirty = True
             except Exception:       # noqa: BLE001
-                item["sector"], item["industry"] = "?", "?"
+                pass            # 查唔到就留空, 下次再試, 唔好覆蓋已有資料
 
         # 分拆股冇招股價, 用首日收市價做基準, 只記一次
         ref = item.get("ref_price")
@@ -474,6 +474,24 @@ def add(args):
     return 0
 
 
+def export_sheet(path=None):
+    """出一個畀 Google Sheets 用嘅 CSV: 只有靜態資料, 價格交畀 GOOGLEFINANCE"""
+    wl = load(WATCHLIST, [])
+    path = path or os.path.join(BASE, "watchlist.csv")
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["ticker", "name", "parent", "type", "list_date",
+                    "sector", "industry", "ref_price", "ref_basis"])
+        for x in sorted(wl, key=lambda i: i.get("list_date") or ""):
+            w.writerow([x["ticker"], x["name"], x["parent"],
+                        "IPO" if x["type"] == "ipo" else "Spinoff",
+                        x.get("list_date", ""), x.get("sector", ""),
+                        x.get("industry", ""), x.get("ref_price", ""),
+                        x.get("ref_note", "招股價")])
+    print(f"已寫入 {path}（{len(wl)} 隻）")
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser(description="分拆/分拆上市新股月度監察")
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -481,6 +499,7 @@ def main():
     p = sub.add_parser("init"); p.add_argument("--force", action="store_true")
     p = sub.add_parser("discover"); p.add_argument("--year", type=int)
     sub.add_parser("check")
+    sub.add_parser("export")
     p = sub.add_parser("add")
     p.add_argument("ticker")
     p.add_argument("--name")
@@ -497,13 +516,20 @@ def main():
         return discover(a.year) or 0
     if a.cmd == "check":
         return check()
+    if a.cmd == "export":
+        return export_sheet()
     if a.cmd == "add":
         return add(a)
     if a.cmd == "run":
         if not os.path.exists(WATCHLIST):
             init()
         discover()
-        return check()
+        export_sheet()
+        try:
+            return check()
+        except Exception as e:      # noqa: BLE001
+            print(f"[info] 報價攞唔到 ({e}), 但 watchlist.csv 已更新", file=sys.stderr)
+            return 0
 
 
 if __name__ == "__main__":
