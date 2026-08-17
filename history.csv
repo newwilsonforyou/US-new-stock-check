@@ -1,0 +1,15 @@
+date,ticker,name,parent,type,list_date,sector,industry,ref_price,ref_basis,price,high52,pct_vs_ref,pct_vs_high52,flags
+2026-08-17,VSNT,Versant Media Group,Comcast (CMCSA),spinoff,2026-01-05,?,?,,,,,,,NO DATA (y1:HTTPError 429 / y2:HTTPError 429 / stooq:ValueEr
+2026-08-17,RNA,Atrium Therapeutics,Avidity Bio,spinoff,2026-02-26,?,?,,,,,,,NO DATA (y1:HTTPError 429 / y2:HTTPError 429 / stooq:ValueEr
+2026-08-17,MMED,MiniMed Group,Medtronic (MDT),ipo,2026-03-06,?,?,20.00,,,,,,NO DATA (y1:HTTPError 429 / y2:HTTPError 429 / stooq:ValueEr
+2026-08-17,PAYP,PayPay Corporation,SoftBank (SBG),ipo,2026-03-12,?,?,16.00,,,,,,NO DATA (y1:HTTPError 429 / y2:HTTPError 429 / stooq:ValueEr
+2026-08-17,VGNT,Versigent PLC,Aptiv (APTV),spinoff,2026-04-01,?,?,,,,,,,NO DATA (y1:HTTPError 429 / y2:HTTPError 429 / stooq:ValueEr
+2026-08-17,TRAX,First Tracks Bio,AnaptysBio (ANAB),spinoff,2026-04-20,?,?,,,,,,,NO DATA (y1:HTTPError 429 / y2:HTTPError 429 / stooq:ValueEr
+2026-08-17,OCTV,Octave Intelligence,Hexagon AB,spinoff,2026-05-28,?,?,,,,,,,NO DATA (y1:HTTPError 429 / y2:HTTPError 429 / stooq:ValueEr
+2026-08-17,FDXF,FedEx Freight,FedEx (FDX),spinoff,2026-06-01,?,?,,,,,,,NO DATA (y1:HTTPError 429 / y2:HTTPError 429 / stooq:ValueEr
+2026-08-17,NVRI,Enviri Corp,Envivio Inc (ENVI),spinoff,2026-06-01,?,?,,,,,,,NO DATA (y1:HTTPError 429 / y2:HTTPError 429 / stooq:ValueEr
+2026-08-17,QNT,Quantinuum,Honeywell (HON),ipo,2026-06-04,?,?,60.00,,,,,,NO DATA (y1:HTTPError 429 / y2:HTTPError 429 / stooq:ValueEr
+2026-08-17,HONA,Honeywell Aerospace,Honeywell (HON),spinoff,2026-06-29,?,?,,,,,,,NO DATA (y1:HTTPError 429 / y2:HTTPError 429 / stooq:ValueEr
+2026-08-17,MBGL,Mobility Global,S&P Global (SPGI),spinoff,2026-07-01,?,?,,,,,,,NO DATA (y1:HTTPError 429 / y2:HTTPError 429 / stooq:ValueEr
+2026-08-17,MFP,Midera Food Processing,Middleby (MIDD),spinoff,2026-07-06,?,?,,,,,,,NO DATA (y1:HTTPError 429 / y2:HTTPError 429 / stooq:ValueEr
+2026-08-17,ADIG,ADI Global Distribution,Resideo (REZI),spinoff,2026-08-04,?,?,,,,,,,NO DATA (y1:HTTPError 429 / y2:HTTPError 429 / stooq:ValueEr

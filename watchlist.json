@@ -1,0 +1,114 @@
+[
+  {
+    "ticker": "VSNT",
+    "name": "Versant Media Group",
+    "parent": "Comcast (CMCSA)",
+    "type": "spinoff",
+    "list_date": "2026-01-05",
+    "ref_price": null
+  },
+  {
+    "ticker": "RNA",
+    "name": "Atrium Therapeutics",
+    "parent": "Avidity Bio",
+    "type": "spinoff",
+    "list_date": "2026-02-26",
+    "ref_price": null
+  },
+  {
+    "ticker": "MMED",
+    "name": "MiniMed Group",
+    "parent": "Medtronic (MDT)",
+    "type": "ipo",
+    "list_date": "2026-03-06",
+    "ref_price": 20.0
+  },
+  {
+    "ticker": "PAYP",
+    "name": "PayPay Corporation",
+    "parent": "SoftBank (SBG)",
+    "type": "ipo",
+    "list_date": "2026-03-12",
+    "ref_price": 16.0
+  },
+  {
+    "ticker": "VGNT",
+    "name": "Versigent PLC",
+    "parent": "Aptiv (APTV)",
+    "type": "spinoff",
+    "list_date": "2026-04-01",
+    "ref_price": null
+  },
+  {
+    "ticker": "TRAX",
+    "name": "First Tracks Bio",
+    "parent": "AnaptysBio (ANAB)",
+    "type": "spinoff",
+    "list_date": "2026-04-20",
+    "ref_price": null
+  },
+  {
+    "ticker": "OCTV",
+    "name": "Octave Intelligence",
+    "parent": "Hexagon AB",
+    "type": "spinoff",
+    "list_date": "2026-05-28",
+    "ref_price": null
+  },
+  {
+    "ticker": "FDXF",
+    "name": "FedEx Freight",
+    "parent": "FedEx (FDX)",
+    "type": "spinoff",
+    "list_date": "2026-06-01",
+    "ref_price": null
+  },
+  {
+    "ticker": "NVRI",
+    "name": "Enviri Corp",
+    "parent": "Envivio Inc (ENVI)",
+    "type": "spinoff",
+    "list_date": "2026-06-01",
+    "ref_price": null
+  },
+  {
+    "ticker": "QNT",
+    "name": "Quantinuum",
+    "parent": "Honeywell (HON)",
+    "type": "ipo",
+    "list_date": "2026-06-04",
+    "ref_price": 60.0
+  },
+  {
+    "ticker": "HONA",
+    "name": "Honeywell Aerospace",
+    "parent": "Honeywell (HON)",
+    "type": "spinoff",
+    "list_date": "2026-06-29",
+    "ref_price": null
+  },
+  {
+    "ticker": "MBGL",
+    "name": "Mobility Global",
+    "parent": "S&P Global (SPGI)",
+    "type": "spinoff",
+    "list_date": "2026-07-01",
+    "ref_price": null
+  },
+  {
+    "ticker": "MFP",
+    "name": "Midera Food Processing",
+    "parent": "Middleby (MIDD)",
+    "type": "spinoff",
+    "list_date": "2026-07-06",
+    "ref_price": null
+  },
+  {
+    "ticker": "ADIG",
+    "name": "ADI Global Distribution",
+    "parent": "Resideo (REZI)",
+    "type": "spinoff",
+    "list_date": "2026-08-04",
+    "ref_price": null
+  }
+]
