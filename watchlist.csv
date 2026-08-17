@@ -1,0 +1,15 @@
+ticker,name,parent,type,list_date,sector,industry,ref_price,ref_basis
+VSNT,Versant Media Group,Comcast (CMCSA),Spinoff,2026-01-05,Communication Services,Entertainment,45.65,首日收市價
+RNA,Atrium Therapeutics,Avidity Bio,Spinoff,2026-02-26,Healthcare,Biotechnology,14.75,首日收市價
+MMED,MiniMed Group,Medtronic (MDT),IPO,2026-03-06,Healthcare,Medical Instruments & Supplies,20.0,招股價
+PAYP,PayPay Corporation,SoftBank (SBG),IPO,2026-03-12,Technology,Software—Infrastructure,16.0,招股價
+VGNT,Versigent PLC,Aptiv (APTV),Spinoff,2026-04-01,Consumer Cyclical,Auto Parts,30.2,首日收市價
+TRAX,First Tracks Bio,AnaptysBio (ANAB),Spinoff,2026-04-20,Healthcare,Biotechnology,19.0,首日收市價
+OCTV,Octave Intelligence,Hexagon AB,Spinoff,2026-05-28,Technology,Software—Application,21.96,首日收市價
+FDXF,FedEx Freight,FedEx (FDX),Spinoff,2026-06-01,Industrials,Integrated Freight & Logistics,151.0,首日收市價
+NVRI,Enviri Corporation,Envivio Inc (ENVI),Spinoff,2026-06-01,Industrials,Waste Management,11.63,首日收市價
+QNT,Quantinuum,Honeywell (HON),IPO,2026-06-04,Technology,Software—Application,60.0,招股價
+HONA,Honeywell Aerospace,Honeywell (HON),Spinoff,2026-06-29,Industrials,Aerospace & Defense,200.0,首日收市價
+MBGL,Mobility Global,S&P Global (SPGI),Spinoff,2026-07-01,Technology,Software—Infrastructure,21.0,首日收市價
+MFP,Midera Food Processing,Middleby (MIDD),Spinoff,2026-07-06,Industrials,Specialty Industrial Machinery,110.5,首日收市價
+ADIG,ADI Global Distribution,Resideo (REZI),Spinoff,2026-08-04,Technology,Computer Hardware,21.0,首日收市價
