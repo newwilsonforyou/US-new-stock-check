@@ -1,0 +1,142 @@
+[
+  {
+    "ticker": "VSNT",
+    "name": "Versant Media Group",
+    "parent": "Comcast (CMCSA)",
+    "type": "spinoff",
+    "list_date": "2026-01-05",
+    "ref_price": 45.65,
+    "sector": "Communication Services",
+    "industry": "Entertainment",
+    "ref_note": "首日收市價"
+  },
+  {
+    "ticker": "RNA",
+    "name": "Atrium Therapeutics",
+    "parent": "Avidity Bio",
+    "type": "spinoff",
+    "list_date": "2026-02-26",
+    "ref_price": 14.75,
+    "sector": "Healthcare",
+    "industry": "Biotechnology",
+    "ref_note": "首日收市價"
+  },
+  {
+    "ticker": "MMED",
+    "name": "MiniMed Group",
+    "parent": "Medtronic (MDT)",
+    "type": "ipo",
+    "list_date": "2026-03-06",
+    "ref_price": 20.0,
+    "sector": "Healthcare",
+    "industry": "Medical Instruments & Supplies"
+  },
+  {
+    "ticker": "PAYP",
+    "name": "PayPay Corporation",
+    "parent": "SoftBank (SBG)",
+    "type": "ipo",
+    "list_date": "2026-03-12",
+    "ref_price": 16.0,
+    "sector": "Technology",
+    "industry": "Software—Infrastructure"
+  },
+  {
+    "ticker": "VGNT",
+    "name": "Versigent PLC",
+    "parent": "Aptiv (APTV)",
+    "type": "spinoff",
+    "list_date": "2026-04-01",
+    "ref_price": 30.2,
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Parts",
+    "ref_note": "首日收市價"
+  },
+  {
+    "ticker": "TRAX",
+    "name": "First Tracks Bio",
+    "parent": "AnaptysBio (ANAB)",
+    "type": "spinoff",
+    "list_date": "2026-04-20",
+    "ref_price": 19.0,
+    "sector": "Healthcare",
+    "industry": "Biotechnology",
+    "ref_note": "首日收市價"
+  },
+  {
+    "ticker": "OCTV",
+    "name": "Octave Intelligence",
+    "parent": "Hexagon AB",
+    "type": "spinoff",
+    "list_date": "2026-05-28",
+    "ref_price": 21.96,
+    "sector": "Technology",
+    "industry": "Software—Application",
+    "ref_note": "首日收市價"
+  },
+  {
+    "ticker": "FDXF",
+    "name": "FedEx Freight",
+    "parent": "FedEx (FDX)",
+    "type": "spinoff",
+    "list_date": "2026-06-01",
+    "ref_price": 151.0,
+    "sector": "Industrials",
+    "industry": "Integrated Freight & Logistics",
+    "ref_note": "首日收市價"
+  },
+  {
+    "ticker": "QNT",
+    "name": "Quantinuum",
+    "parent": "Honeywell (HON)",
+    "type": "ipo",
+    "list_date": "2026-06-04",
+    "ref_price": 60.0,
+    "sector": "Technology",
+    "industry": "Software—Application"
+  },
+  {
+    "ticker": "HONA",
+    "name": "Honeywell Aerospace",
+    "parent": "Honeywell (HON)",
+    "type": "spinoff",
+    "list_date": "2026-06-29",
+    "ref_price": 200.0,
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "ref_note": "首日收市價"
+  },
+  {
+    "ticker": "MBGL",
+    "name": "Mobility Global",
+    "parent": "S&P Global (SPGI)",
+    "type": "spinoff",
+    "list_date": "2026-07-01",
+    "ref_price": 20.7,
+    "sector": "Technology",
+    "industry": "Software—Infrastructure",
+    "ref_note": "首日收市價"
+  },
+  {
+    "ticker": "MFP",
+    "name": "Midera Food Processing",
+    "parent": "Middleby (MIDD)",
+    "type": "spinoff",
+    "list_date": "2026-07-06",
+    "ref_price": 110.5,
+    "sector": "Industrials",
+    "industry": "Specialty Industrial Machinery",
+    "ref_note": "首日收市價"
+  },
+  {
+    "ticker": "ADIG",
+    "name": "ADI Global Distribution",
+    "parent": "Resideo (REZI)",
+    "type": "spinoff",
+    "list_date": "2026-08-04",
+    "ref_price": 21.0,
+    "sector": "Technology",
+    "industry": "Computer Hardware",
+    "ref_note": "首日收市價"
+  }
+]
