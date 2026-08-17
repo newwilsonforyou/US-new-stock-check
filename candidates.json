@@ -1,0 +1,874 @@
+[
+  {
+    "ticker": "SYMBOL",
+    "name": "Company Name",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "IPO Date",
+    "ref_price": null
+  },
+  {
+    "ticker": "TBCV",
+    "name": "Thunder Bridge Capital Partners V, Ltd.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-08-13",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "FOIL",
+    "name": "Londian Wason New Energy Tech Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-08-12",
+    "ref_price": 22.0
+  },
+  {
+    "ticker": "SNSC",
+    "name": "SunScout Holding Limited",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-08-12",
+    "ref_price": null
+  },
+  {
+    "ticker": "VOGX",
+    "name": "Vogenx, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-08-12",
+    "ref_price": 13.0
+  },
+  {
+    "ticker": "BLSM",
+    "name": "BlossomHill Therapeutics, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-08-07",
+    "ref_price": 16.0
+  },
+  {
+    "ticker": "LTGO",
+    "name": "Latigo Biotherapeutics, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-08-07",
+    "ref_price": 18.0
+  },
+  {
+    "ticker": "TP",
+    "name": "Ticketplus Ltd.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-08-07",
+    "ref_price": 8.0
+  },
+  {
+    "ticker": "BRVE",
+    "name": "Braveheart Bio, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-08-06",
+    "ref_price": 18.0
+  },
+  {
+    "ticker": "ATTO",
+    "name": "Attovia Therapeutics, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-08-05",
+    "ref_price": 17.0
+  },
+  {
+    "ticker": "APMD",
+    "name": "Apnimed, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-07-31",
+    "ref_price": 16.0
+  },
+  {
+    "ticker": "JMKE",
+    "name": "Jersey Mike's Subs Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-07-30",
+    "ref_price": 23.0
+  },
+  {
+    "ticker": "REF",
+    "name": "Reformation Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-07-30",
+    "ref_price": 15.0
+  },
+  {
+    "ticker": "IMC",
+    "name": "IMC Rare Earths Ltd",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-07-29",
+    "ref_price": 5.0
+  },
+  {
+    "ticker": "SCTX",
+    "name": "Scribe Therapeutics Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-07-24",
+    "ref_price": 15.0
+  },
+  {
+    "ticker": "CSQR",
+    "name": "Csquare, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-07-16",
+    "ref_price": 21.0
+  },
+  {
+    "ticker": "STDN",
+    "name": "Standard Nuclear, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-07-16",
+    "ref_price": 15.0
+  },
+  {
+    "ticker": "JONE",
+    "name": "Jones Ventures INTL Acquisition1 Corp",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-07-14",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "RACD",
+    "name": "Research Alliance Corporation IV",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-07-13",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "SKHY",
+    "name": "SK hynix Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-07-10",
+    "ref_price": 149.0
+  },
+  {
+    "ticker": "BSP",
+    "name": "Bending Spoons S.p.A.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-07-01",
+    "ref_price": 29.0
+  },
+  {
+    "ticker": "ITG",
+    "name": "ITG, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-07-01",
+    "ref_price": 16.0
+  },
+  {
+    "ticker": "LIME",
+    "name": "Neutron Holdings, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-07-01",
+    "ref_price": 25.0
+  },
+  {
+    "ticker": "SIND",
+    "name": "Sinda Ltd.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-06-26",
+    "ref_price": 12.0
+  },
+  {
+    "ticker": "CGCF",
+    "name": "Cartesian Growth Corporation IV",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-06-25",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "DPC",
+    "name": "DPC Holdings PLC",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-06-25",
+    "ref_price": 33.0
+  },
+  {
+    "ticker": "DSC",
+    "name": "DSC Holdings Ltd.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-06-25",
+    "ref_price": 17.0
+  },
+  {
+    "ticker": "GHXI",
+    "name": "Gores Holdings XI, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-06-23",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "FCBM",
+    "name": "First Carolina Financial Services, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-06-18",
+    "ref_price": 12.5
+  },
+  {
+    "ticker": "FISN",
+    "name": "Deep Fission, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-06-18",
+    "ref_price": 16.0
+  },
+  {
+    "ticker": "KARD",
+    "name": "Kardigan, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-06-18",
+    "ref_price": 16.0
+  },
+  {
+    "ticker": "WLCO",
+    "name": "Wilco 63 Corporation",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-06-18",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "CAES",
+    "name": "Cantor Equity Partners VII, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-06-17",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "FRBT",
+    "name": "Forbright, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-06-11",
+    "ref_price": 18.0
+  },
+  {
+    "ticker": "EROC",
+    "name": "ERock, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-06-10",
+    "ref_price": 21.5
+  },
+  {
+    "ticker": "PBLS",
+    "name": "Parabilis Medicines, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-06-10",
+    "ref_price": 20.0
+  },
+  {
+    "ticker": "SHOT",
+    "name": "RMG ML Sports Holdings",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-06-10",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "WHK",
+    "name": "WhiteHawk Minerals Corp.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-06-09",
+    "ref_price": 26.0
+  },
+  {
+    "ticker": "INIO",
+    "name": "Innio N.V.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-06-04",
+    "ref_price": 27.0
+  },
+  {
+    "ticker": "IPVV",
+    "name": "InterPrivate Investment Partners V, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-06-04",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "LFTO",
+    "name": "Liftoff Mobile, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-06-04",
+    "ref_price": 23.0
+  },
+  {
+    "ticker": "LTGR",
+    "name": "Long Table Growth Corp.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-06-04",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "SSMR",
+    "name": "Sunshine Silver Mining & Refining Company",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-06-04",
+    "ref_price": 13.5
+  },
+  {
+    "ticker": "APUR",
+    "name": "Aperture AC",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-05-21",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "LCLN",
+    "name": "Lincoln International, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-05-20",
+    "ref_price": 20.0
+  },
+  {
+    "ticker": "RACC",
+    "name": "Research Alliance Corporation III",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-05-20",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "EXYN",
+    "name": "Exyn Technologies, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-05-15",
+    "ref_price": 7.75
+  },
+  {
+    "ticker": "VIDA",
+    "name": "VIDA Global Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-05-15",
+    "ref_price": 4.0
+  },
+  {
+    "ticker": "BXDC",
+    "name": "Blackstone Digital Infrastructure Trust Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-05-14",
+    "ref_price": 20.0
+  },
+  {
+    "ticker": "CBRS",
+    "name": "Cerebras Systems Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-05-14",
+    "ref_price": 185.0
+  },
+  {
+    "ticker": "EROK",
+    "name": "EagleRock Land, LLC",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-05-14",
+    "ref_price": 18.5
+  },
+  {
+    "ticker": "MWC",
+    "name": "Micware Co., Ltd.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-05-14",
+    "ref_price": 8.0
+  },
+  {
+    "ticker": "FRVO",
+    "name": "Fervo Energy Company",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-05-13",
+    "ref_price": 27.0
+  },
+  {
+    "ticker": "GMRS",
+    "name": "GMR Solutions Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-05-13",
+    "ref_price": 15.0
+  },
+  {
+    "ticker": "MOBI",
+    "name": "Mobia Medical, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-05-08",
+    "ref_price": 15.0
+  },
+  {
+    "ticker": "ODTX",
+    "name": "Odyssey Therapeutics, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-05-08",
+    "ref_price": 18.0
+  },
+  {
+    "ticker": "HAWK",
+    "name": "HawkEye 360, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-05-07",
+    "ref_price": 26.0
+  },
+  {
+    "ticker": "SAGU",
+    "name": "Shreya Acquisition Group",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-05-07",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "SUJA",
+    "name": "Suja Life, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-05-07",
+    "ref_price": 21.0
+  },
+  {
+    "ticker": "REA",
+    "name": "Rare Earths Americas, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-05-06",
+    "ref_price": 19.0
+  },
+  {
+    "ticker": "COAG",
+    "name": "Hemab Therapeutics Holdings, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-05-01",
+    "ref_price": 18.0
+  },
+  {
+    "ticker": "MTNE",
+    "name": "CH4 Natural Solutions Corporation",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-05-01",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "SPTX",
+    "name": "Seaport Therapeutics, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-05-01",
+    "ref_price": 18.0
+  },
+  {
+    "ticker": "AVLN",
+    "name": "Avalyn Pharma Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-04-30",
+    "ref_price": 18.0
+  },
+  {
+    "ticker": "MCAH",
+    "name": "Mountain Crest Acquisition 6 Corp.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-04-30",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "SBMT",
+    "name": "Silver Bow Mining Corp.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-04-30",
+    "ref_price": 11.5
+  },
+  {
+    "ticker": "PS",
+    "name": "Pershing Square Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-04-29",
+    "ref_price": 50.0
+  },
+  {
+    "ticker": "XE",
+    "name": "X-Energy, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-04-24",
+    "ref_price": 23.0
+  },
+  {
+    "ticker": "ELMT",
+    "name": "The Elmet Group Co.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-04-23",
+    "ref_price": 14.0
+  },
+  {
+    "ticker": "NHP",
+    "name": "National Healthcare Properties, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-04-22",
+    "ref_price": 12.0
+  },
+  {
+    "ticker": "YSWY",
+    "name": "Yesway, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-04-22",
+    "ref_price": 20.0
+  },
+  {
+    "ticker": "ALMR",
+    "name": "Alamar Biosciences, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-04-17",
+    "ref_price": 17.0
+  },
+  {
+    "ticker": "AVEX",
+    "name": "AEVEX Corp.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-04-17",
+    "ref_price": 20.0
+  },
+  {
+    "ticker": "KLRA",
+    "name": "Kailera Therapeutics, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-04-17",
+    "ref_price": 16.0
+  },
+  {
+    "ticker": "ARXS",
+    "name": "Arxis, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-04-16",
+    "ref_price": 28.0
+  },
+  {
+    "ticker": "MAIR",
+    "name": "Madison Air Solutions Corporation",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-04-16",
+    "ref_price": 27.0
+  },
+  {
+    "ticker": "NHIV",
+    "name": "NewHold Investment Corp IV",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-04-15",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "HMH",
+    "name": "HMH Holding Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-04-01",
+    "ref_price": 20.0
+  },
+  {
+    "ticker": "KPET",
+    "name": "KPET Ultra Paceline Corporation",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-03-31",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "GMTL",
+    "name": "Guardian Metal Resources PLC",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-03-20",
+    "ref_price": 16.35
+  },
+  {
+    "ticker": "JAN",
+    "name": "Janus Living, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-03-20",
+    "ref_price": 20.0
+  },
+  {
+    "ticker": "SWMR",
+    "name": "Swarmer, Inc",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-03-17",
+    "ref_price": 5.0
+  },
+  {
+    "ticker": "PONO",
+    "name": "Pono Capital Four, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-03-13",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "GENB",
+    "name": "Generate Biomedicines, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-02-27",
+    "ref_price": 16.0
+  },
+  {
+    "ticker": "TRGS",
+    "name": "TRG Latin America Acquisitions Corp.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-02-26",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "ROC",
+    "name": "Rank One Computing Corporation",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-02-20",
+    "ref_price": 6.0
+  },
+  {
+    "ticker": "APC",
+    "name": "ARKO Petroleum Corp.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-02-12",
+    "ref_price": 18.0
+  },
+  {
+    "ticker": "AGBK",
+    "name": "AGI Inc",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-02-11",
+    "ref_price": 12.0
+  },
+  {
+    "ticker": "MWH",
+    "name": "SOLV Energy, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-02-11",
+    "ref_price": 25.0
+  },
+  {
+    "ticker": "JAGU",
+    "name": "Jaguar Uranium Corp.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-02-10",
+    "ref_price": 4.0
+  },
+  {
+    "ticker": "AGMB",
+    "name": "AgomAb Therapeutics NV",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-02-06",
+    "ref_price": 16.0
+  },
+  {
+    "ticker": "OFRM",
+    "name": "Once Upon A Farm, PBC",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-02-06",
+    "ref_price": 18.0
+  },
+  {
+    "ticker": "SGP",
+    "name": "SpyGlass Pharma, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-02-06",
+    "ref_price": 16.0
+  },
+  {
+    "ticker": "BOBS",
+    "name": "Bob's Discount Furniture, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-02-05",
+    "ref_price": 17.0
+  },
+  {
+    "ticker": "CEPS",
+    "name": "Cantor Equity Partners VI, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-02-05",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "EIKN",
+    "name": "Eikon Therapeutics, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-02-05",
+    "ref_price": 18.0
+  },
+  {
+    "ticker": "FPS",
+    "name": "Forgent Power Solutions, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-02-05",
+    "ref_price": 27.0
+  },
+  {
+    "ticker": "HCIC",
+    "name": "Hennessy Capital Investment Corp. VIII",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-02-05",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "MANE",
+    "name": "Veradermics, Incorporated",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-02-04",
+    "ref_price": 17.0
+  },
+  {
+    "ticker": "NBRG",
+    "name": "Newbridge Acquisition Limited",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-01-30",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "LIFE",
+    "name": "Ethos Technologies Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-01-29",
+    "ref_price": 19.0
+  },
+  {
+    "ticker": "PICS",
+    "name": "PicS N.V.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-01-29",
+    "ref_price": 19.0
+  },
+  {
+    "ticker": "GIX",
+    "name": "GigCapital9 Corp.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-01-27",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "EQPT",
+    "name": "EquipmentShare.com Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-01-23",
+    "ref_price": 24.5
+  },
+  {
+    "ticker": "ALOV",
+    "name": "Aldabra 4 Liquidity Opportunity Vehicle, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-01-22",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "BTGO",
+    "name": "Bitgo Holdings, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-01-22",
+    "ref_price": 18.0
+  },
+  {
+    "ticker": "GCDT",
+    "name": "Green Circle Decarbonize Technology Limited",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-01-13",
+    "ref_price": 4.0
+  },
+  {
+    "ticker": "AKTS",
+    "name": "Aktis Oncology, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-01-09",
+    "ref_price": 18.0
+  },
+  {
+    "ticker": "BUDA",
+    "name": "Buda Juice, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-01-08",
+    "ref_price": 7.5
+  }
+]

@@ -86,6 +86,14 @@
     "ref_note": "首日收市價"
   },
   {
+    "ticker": "NVRI",
+    "name": "Enviri Corp",
+    "parent": "Envivio Inc (ENVI)",
+    "type": "spinoff",
+    "list_date": "2026-06-01",
+    "ref_price": null
+  },
+  {
     "ticker": "QNT",
     "name": "Quantinuum",
     "parent": "Honeywell (HON)",
@@ -138,5 +146,13 @@
     "sector": "Technology",
     "industry": "Computer Hardware",
     "ref_note": "首日收市價"
+  },
+  {
+    "ticker": "NEW STOCK",
+    "name": "New Company",
+    "parent": "Parent Company (Parent)",
+    "type": "spinoff",
+    "list_date": "Date",
+    "ref_price": null
   }
 ]
