@@ -1,0 +1,31 @@
+name: weekly-spinoff-check
+
+on:
+  schedule:
+    # 每星期一 13:00 UTC = 香港時間 21:00 / 英國夏令 14:00
+    - cron: "0 13 * * 1"
+  workflow_dispatch:      # 可以喺網頁手動撳掣即刻跑
+
+permissions:
+  contents: write         # 冇呢句就 commit 唔到報告
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run weekly check
+        run: python3 spinoff_monitor.py run
+
+      - name: Commit report
+        run: |
+          git config user.name  "spinoff-bot"
+          git config user.email "spinoff-bot@users.noreply.github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "weekly check $(date +%F)"
+          git push
