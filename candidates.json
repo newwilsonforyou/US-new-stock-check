@@ -862,5 +862,13 @@
     "type": "ipo",
     "list_date": "2026-01-08",
     "ref_price": 7.5
+  },
+  {
+    "ticker": "LYNX",
+    "name": "Lyntris Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-08-19",
+    "ref_price": 17.5
   }
 ]
