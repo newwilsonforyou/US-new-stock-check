@@ -870,5 +870,13 @@
     "type": "ipo",
     "list_date": "2026-08-19",
     "ref_price": 17.5
+  },
+  {
+    "ticker": "ADBT",
+    "name": "Advasa Holdings, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-08-25",
+    "ref_price": 10.0
   }
 ]
