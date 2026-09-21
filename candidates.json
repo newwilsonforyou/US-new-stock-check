@@ -878,5 +878,45 @@
     "type": "ipo",
     "list_date": "2026-08-25",
     "ref_price": 10.0
+  },
+  {
+    "ticker": "ETRA",
+    "name": "Electra Therapeutics, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-09-18",
+    "ref_price": 15.0
+  },
+  {
+    "ticker": "OIG",
+    "name": "Orion180 Insurance Group Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-09-18",
+    "ref_price": 12.0
+  },
+  {
+    "ticker": "ASBH",
+    "name": "American Savings Bank, National Association",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-09-16",
+    "ref_price": 16.0
+  },
+  {
+    "ticker": "ETSS",
+    "name": "Energy Transition Special Opportunities",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-05-15",
+    "ref_price": 10.0
+  },
+  {
+    "ticker": "PPHC",
+    "name": "Public Policy Holding Company, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-01-28",
+    "ref_price": 12.25
   }
 ]
