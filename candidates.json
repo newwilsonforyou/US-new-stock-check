@@ -918,5 +918,13 @@
     "type": "ipo",
     "list_date": "2026-01-28",
     "ref_price": 12.25
+  },
+  {
+    "ticker": "ADRX",
+    "name": "ADARx Pharmaceuticals, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-09-25",
+    "ref_price": 17.0
   }
 ]
