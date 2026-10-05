@@ -926,5 +926,13 @@
     "type": "ipo",
     "list_date": "2026-09-25",
     "ref_price": 17.0
+  },
+  {
+    "ticker": "ACCV",
+    "name": "Accelevation Holdings Corp.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-09-30",
+    "ref_price": 18.0
   }
 ]

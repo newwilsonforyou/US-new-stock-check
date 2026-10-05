@@ -149,5 +149,13 @@
     "sector": "Technology",
     "industry": "Computer Hardware",
     "ref_note": "首日收市價"
+  },
+  {
+    "ticker": "VYLR",
+    "name": "Vylor Inc",
+    "parent": "Dupont De Nemours Inc (DD)",
+    "type": "spinoff",
+    "list_date": "2026-10-01",
+    "ref_price": null
   }
 ]
