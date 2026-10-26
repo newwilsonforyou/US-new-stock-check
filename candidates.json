@@ -974,5 +974,13 @@
     "type": "ipo",
     "list_date": "2026-10-15",
     "ref_price": 16.0
+  },
+  {
+    "ticker": "LYCA",
+    "name": "Lycia Therapeutics, Inc.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-10-23",
+    "ref_price": 18.0
   }
 ]
