@@ -173,5 +173,13 @@
     "type": "spinoff",
     "list_date": "2026-10-09",
     "ref_price": null
+  },
+  {
+    "ticker": "MSGR",
+    "name": "Msg Rangers Corp",
+    "parent": "Msg Knickerbockers Corp (MSGK)",
+    "type": "spinoff",
+    "list_date": "2026-10-27",
+    "ref_price": null
   }
 ]
