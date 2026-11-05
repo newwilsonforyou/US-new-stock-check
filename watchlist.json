@@ -16,7 +16,10 @@
     "parent": "Becton Dickinson & Co. (BDX)",
     "type": "spinoff",
     "list_date": "2026-02-10",
-    "ref_price": null
+    "ref_price": 327.02,
+    "sector": "Healthcare",
+    "industry": "Diagnostics & Research",
+    "ref_note": "首日收市價"
   },
   {
     "ticker": "RNA",
@@ -164,7 +167,10 @@
     "parent": "Dupont De Nemours Inc (DD)",
     "type": "spinoff",
     "list_date": "2026-10-01",
-    "ref_price": null
+    "ref_price": 68.26,
+    "sector": "Financial Services",
+    "industry": "Shell Companies",
+    "ref_note": "首日收市價"
   },
   {
     "ticker": "AIOK",
@@ -172,7 +178,10 @@
     "parent": "Toro Corp (TORO)",
     "type": "spinoff",
     "list_date": "2026-10-09",
-    "ref_price": null
+    "ref_price": 8.7,
+    "sector": "Energy",
+    "industry": "Oil & Gas Refining & Marketing",
+    "ref_note": "首日收市價"
   },
   {
     "ticker": "MSGR",
@@ -180,6 +189,9 @@
     "parent": "Msg Knickerbockers Corp (MSGK)",
     "type": "spinoff",
     "list_date": "2026-10-27",
-    "ref_price": null
+    "ref_price": 177.61,
+    "sector": "Communication Services",
+    "industry": "Entertainment",
+    "ref_note": "首日收市價"
   }
 ]

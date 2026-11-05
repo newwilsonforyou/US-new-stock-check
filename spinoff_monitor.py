@@ -37,11 +37,24 @@ WATCHLIST = os.path.join(BASE, "watchlist.json")
 CANDIDATES = os.path.join(BASE, "candidates.json")
 HISTORY = os.path.join(BASE, "history.csv")
 
-UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36"}
+# 唔好扮 Chrome。
+#
+# 之前呢度係一條完整嘅 Chrome UA, 結果 Yahoo 對每一個請求都回 429 —
+# report_2026-08-17 到 2026-11-02 入面 18 隻股全部 NO DATA 就係噉嚟,
+# 一行字令成個監察停擺咗幾個月。唔係 rate limit, 真正嘅 Chrome 會帶
+# cookie 同 crumb, 一個冇 cookie 嘅「Chrome」喺佢眼中就係爬蟲。
+#
+# 實測同一條 URL:
+#   Chrome UA -> HTTP 429
+#   Mozilla/5.0 -> HTTP 200
+UA = {"User-Agent": "Mozilla/5.0"}
 
 # 跌穿呢個 % 就當警號 (相對 52 週高位)
 DRAWDOWN_ALERT = 20.0
+
+# 每隻股之間等幾耐先問下一隻 (秒)。18 隻 × 1.5s = 27 秒, 跑一次 check
+# 慢半分鐘, 換返唔使成份報告都係 NO DATA。
+PACE_SECONDS = 1.5
 
 # ---------------------------------------------------------------- 內置種子名單
 SEED = [
@@ -75,13 +88,33 @@ def save(path, data):
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
-def fetch(url, tries=3, sleep=2):
+def fetch(url, tries=4, sleep=2):
+    """
+    429 唔係「冇資料」, 係「你問得太密, 等陣再嚟」。
+
+    之前每次 retry 只等 2、4、6 秒就放棄, report_2026-11-02.md 入面 18 隻
+    股全部 NO DATA (y1:429 / y2:429) 就係噉嚟。而家 429 用指數式等
+    (5、10、20、40 秒), 有 Retry-After 就照佢講, 其他錯誤照舊短等。
+    """
     last = None
     for i in range(tries):
         try:
             req = urllib.request.Request(url, headers=UA)
             with urllib.request.urlopen(req, timeout=25) as r:
                 return r.read().decode("utf-8", "replace")
+        except urllib.error.HTTPError as e:
+            last = e
+            if e.code in (429, 503):
+                wait = 5 * (2 ** i)
+                try:
+                    wait = max(wait, int(e.headers.get("Retry-After") or 0))
+                except (TypeError, ValueError):
+                    pass
+                print(f"[rate] {e.code}, 等 {wait}s 再試 ({i + 1}/{tries})",
+                      file=sys.stderr)
+                time.sleep(wait)
+            else:
+                time.sleep(sleep * (i + 1))
         except Exception as e:          # noqa: BLE001
             last = e
             time.sleep(sleep * (i + 1))
@@ -89,7 +122,32 @@ def fetch(url, tries=3, sleep=2):
 
 
 # ---------------------------------------------------------------- Yahoo 報價
-def _quote_yahoo(ticker, host):
+def _first_close_on_or_after(stamps, closes, list_date):
+    """
+    上市首日收市價 = list_date 當日、或者之後第一個有成交嘅收市價。
+
+    以前係 `closes[0]`, 即係 2 年範圍入面最舊嗰個, 兩種情況都會錯:
+
+      · 舊公司分拆後繼續掛牌 — Waters (WAT) 1995 年已經上市, closes[0]
+        係 2024 年嘅價, 同「上市價」completely 無關。
+      · 分拆股正式買賣之前通常有幾日 when-issued (認購權) 交易, 啲價
+        又薄又平 — MSG Rangers 喺 10 月 22-26 連續三日 190.00 開
+        190.00 收, 27 號先真正開 176.00 收 177.61。
+
+    由 list_date 起計, 兩種都自動避開。冇 list_date 先退返去 closes[0]。
+    """
+    if not list_date:
+        return closes[0] if closes else None
+    for ts, c in zip(stamps, closes):
+        if c is None:
+            continue
+        day = datetime.fromtimestamp(ts, timezone.utc).strftime("%Y-%m-%d")
+        if day >= list_date:
+            return c
+    return None
+
+
+def _quote_yahoo(ticker, host, list_date=None):
     url = (f"https://{host}/v8/finance/chart/{ticker}"
            f"?range=2y&interval=1d")
     data = json.loads(fetch(url, tries=2, sleep=3))
@@ -97,7 +155,9 @@ def _quote_yahoo(ticker, host):
     if not res:
         raise ValueError("Yahoo 冇資料")
     meta = res[0]["meta"]
-    closes = [c for c in (res[0]["indicators"]["quote"][0].get("close") or []) if c]
+    stamps = res[0].get("timestamp") or []
+    raw = res[0]["indicators"]["quote"][0].get("close") or []
+    closes = [c for c in raw if c]
     if not meta.get("regularMarketPrice"):
         raise ValueError("Yahoo 冇報價")
     return {
@@ -105,12 +165,12 @@ def _quote_yahoo(ticker, host):
         "high52": meta.get("fiftyTwoWeekHigh"),
         "low52": meta.get("fiftyTwoWeekLow"),
         "currency": meta.get("currency", "USD"),
-        "first_close": closes[0] if closes else None,
+        "first_close": _first_close_on_or_after(stamps, raw, list_date),
         "source": "yahoo",
     }
 
 
-def _quote_stooq(ticker):
+def _quote_stooq(ticker, list_date=None):
     """後備source: Stooq 日線 CSV, 唔會封 datacenter IP"""
     url = f"https://stooq.com/q/d/l/?s={ticker.lower()}.us&i=d"
     txt = fetch(url, tries=2, sleep=2)
@@ -135,17 +195,18 @@ def _quote_stooq(ticker):
         "high52": max(r[1] for r in (last_year or rows)),
         "low52": None,
         "currency": "USD",
-        "first_close": rows[0][2],
+        "first_close": next((c for d, _h, c in rows if not list_date or d >= list_date),
+                            rows[0][2]),
         "source": "stooq",
     }
 
 
-def quote(ticker):
+def quote(ticker, list_date=None):
     """依次試 Yahoo query1 / query2 / Stooq, 全部失敗就拋出最後一個錯"""
     errs = []
-    for fn, label in ((lambda: _quote_yahoo(ticker, "query1.finance.yahoo.com"), "y1"),
-                      (lambda: _quote_yahoo(ticker, "query2.finance.yahoo.com"), "y2"),
-                      (lambda: _quote_stooq(ticker), "stooq")):
+    for fn, label in ((lambda: _quote_yahoo(ticker, "query1.finance.yahoo.com", list_date), "y1"),
+                      (lambda: _quote_yahoo(ticker, "query2.finance.yahoo.com", list_date), "y2"),
+                      (lambda: _quote_stooq(ticker, list_date), "stooq")):
         try:
             return fn()
         except Exception as e:      # noqa: BLE001
@@ -304,10 +365,15 @@ def check(write_report=True):
     today = date.today().isoformat()
     rows, dirty = [], False
 
-    for item in wl:
+    for n, item in enumerate(wl):
         t = item["ticker"]
+        # 隔開啲嚟問。18 隻股 × 最多 3 個來源 + 查板塊, 一口氣連環射幾十個
+        # 請求落 Yahoo, 就係 429 嘅成因 — 唔係 Yahoo 封 GitHub, 係我哋問
+        # 得太密。小小間隔換返成份報告有數。
+        if n:
+            time.sleep(PACE_SECONDS)
         try:
-            q = quote(t)
+            q = quote(t, item.get("list_date"))
         except Exception as e:      # noqa: BLE001
             print(f"[warn] {t}: {e}", file=sys.stderr)
             err = f"NO DATA ({e})"[:60]
