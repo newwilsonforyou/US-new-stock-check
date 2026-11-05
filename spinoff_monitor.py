@@ -37,17 +37,30 @@ WATCHLIST = os.path.join(BASE, "watchlist.json")
 CANDIDATES = os.path.join(BASE, "candidates.json")
 HISTORY = os.path.join(BASE, "history.csv")
 
-# 唔好扮 Chrome。
+# 兩個網站要求啱啱相反, 所以 UA 要按網站揀。
 #
-# 之前呢度係一條完整嘅 Chrome UA, 結果 Yahoo 對每一個請求都回 429 —
-# report_2026-08-17 到 2026-11-02 入面 18 隻股全部 NO DATA 就係噉嚟,
-# 一行字令成個監察停擺咗幾個月。唔係 rate limit, 真正嘅 Chrome 會帶
-# cookie 同 crumb, 一個冇 cookie 嘅「Chrome」喺佢眼中就係爬蟲。
+#   Yahoo            : 扮 Chrome -> 429。真 Chrome 會帶 cookie 同 crumb,
+#                      一個冇 cookie 嘅「Chrome」喺佢眼中就係爬蟲。
+#   stockanalysis.com: 唔扮 Chrome -> 403。佢要見到似瀏覽器先畀入。
 #
-# 實測同一條 URL:
-#   Chrome UA -> HTTP 429
-#   Mozilla/5.0 -> HTTP 200
-UA = {"User-Agent": "Mozilla/5.0"}
+# 同一刻實測:
+#   Yahoo   /chart/WAT          Chrome 429 | Mozilla/5.0 200
+#   stockanalysis /ipos/2026/   Chrome 200 | Mozilla/5.0 403
+#
+# 本來成個 script 淨係用一條 Chrome UA, 所以 Yahoo 全線 429 —
+# 2026-08-17 到 11-02 每份報告 18 隻股全部 NO DATA。改成一律用
+# Mozilla/5.0 就輪到 discover 403, 兩個都要先至得。
+UA_SIMPLE = {"User-Agent": "Mozilla/5.0"}
+UA_BROWSER = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                            "AppleWebKit/537.36 (KHTML, like Gecko) "
+                            "Chrome/125.0 Safari/537.36"}
+# 預設照舊個名, 畀其餘未改嘅地方用
+UA = UA_SIMPLE
+
+
+def ua_for(url):
+    """邊個網站要邊種 UA。唔喺名單上就用簡單嗰個。"""
+    return UA_BROWSER if "stockanalysis.com" in url else UA_SIMPLE
 
 # 跌穿呢個 % 就當警號 (相對 52 週高位)
 DRAWDOWN_ALERT = 20.0
@@ -99,7 +112,7 @@ def fetch(url, tries=4, sleep=2):
     last = None
     for i in range(tries):
         try:
-            req = urllib.request.Request(url, headers=UA)
+            req = urllib.request.Request(url, headers=ua_for(url))
             with urllib.request.urlopen(req, timeout=25) as r:
                 return r.read().decode("utf-8", "replace")
         except urllib.error.HTTPError as e:
