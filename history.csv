@@ -253,3 +253,21 @@ date,ticker,name,parent,type,list_date,sector,industry,ref_price,ref_basis,price
 2026-11-05,VYLR,Vylor Inc,Dupont De Nemours Inc (DD),spinoff,2026-10-01,Financial Services,Shell Companies,68.26,首日收市價,71.25,77.39,4.38,-7.93,—
 2026-11-05,AIOK,Ai Okto Corp,Toro Corp (TORO),spinoff,2026-10-09,Energy,Oil & Gas Refining & Marketing,8.70,首日收市價,11.21,31.09,28.85,-63.94,距52週高 -64%
 2026-11-05,MSGR,Msg Rangers Corp,Msg Knickerbockers Corp (MSGK),spinoff,2026-10-27,Communication Services,Entertainment,177.61,首日收市價,229.12,244.00,29.00,-6.10,—
+2026-11-09,VSNT,Versant Media Group,Comcast (CMCSA),spinoff,2026-01-05,Communication Services,Entertainment,45.65,首日收市價,35.09,59.00,-23.13,-40.53,"跌穿上市價, 距52週高 -41%"
+2026-11-09,WAT,Waters Corp,Becton Dickinson & Co. (BDX),spinoff,2026-02-10,Healthcare,Diagnostics & Research,327.02,首日收市價,476.70,482.28,45.77,-1.16,—
+2026-11-09,RNA,Atrium Therapeutics,Avidity Bio,spinoff,2026-02-26,Healthcare,Biotechnology,14.75,首日收市價,8.38,16.77,-43.19,-50.03,"跌穿上市價, 距52週高 -50%"
+2026-11-09,MMED,MiniMed Group,Medtronic (MDT),ipo,2026-03-06,Healthcare,Medical Instruments & Supplies,20.00,招股價,17.88,24.43,-10.60,-26.81,"跌穿上市價, 距52週高 -27%"
+2026-11-09,PAYP,PayPay Corporation,SoftBank (SBG),ipo,2026-03-12,Technology,Software—Infrastructure,16.00,招股價,15.40,24.89,-3.75,-38.13,"跌穿上市價, 距52週高 -38%"
+2026-11-09,VGNT,Versigent PLC,Aptiv (APTV),spinoff,2026-04-01,Consumer Cyclical,Auto Parts,30.20,首日收市價,41.62,50.89,37.81,-18.22,—
+2026-11-09,TRAX,First Tracks Bio,AnaptysBio (ANAB),spinoff,2026-04-20,Healthcare,Biotechnology,19.00,首日收市價,49.70,50.41,161.58,-1.40,—
+2026-11-09,OCTV,Octave Intelligence,Hexagon AB,spinoff,2026-05-28,Technology,Software—Application,21.96,首日收市價,21.06,30.00,-4.10,-29.80,"跌穿上市價, 距52週高 -30%"
+2026-11-09,FDXF,FedEx Freight,FedEx (FDX),spinoff,2026-06-01,Industrials,Integrated Freight & Logistics,151.00,首日收市價,129.05,200.00,-14.54,-35.47,"跌穿上市價, 距52週高 -35%"
+2026-11-09,NVRI,Enviri Corporation,Envivio Inc (ENVI),spinoff,2026-06-01,Industrials,Waste Management,11.63,首日收市價,25.01,25.01,115.05,0.00,創52週新高
+2026-11-09,QNT,Quantinuum,Honeywell (HON),ipo,2026-06-04,Technology,Software—Application,60.00,招股價,40.04,86.79,-33.27,-53.87,"跌穿上市價, 距52週高 -54%"
+2026-11-09,HONA,Honeywell Aerospace,Honeywell (HON),spinoff,2026-06-29,Industrials,Aerospace & Defense,200.00,首日收市價,164.77,297.50,-17.61,-44.62,"跌穿上市價, 距52週高 -45%"
+2026-11-09,MBGL,Mobility Global,S&P Global (SPGI),spinoff,2026-07-01,Technology,Software—Infrastructure,21.00,首日收市價,19.86,26.00,-5.43,-23.62,"跌穿上市價, 距52週高 -24%"
+2026-11-09,MFP,Midera Food Processing,Middleby (MIDD),spinoff,2026-07-06,Industrials,Specialty Industrial Machinery,110.50,首日收市價,46.11,200.00,-58.27,-76.94,"跌穿上市價, 距52週高 -77%"
+2026-11-09,ADIG,ADI Global Distribution,Resideo (REZI),spinoff,2026-08-04,Technology,Computer Hardware,21.00,首日收市價,19.36,30.99,-7.81,-37.53,"跌穿上市價, 距52週高 -38%"
+2026-11-09,VYLR,Vylor Inc,Dupont De Nemours Inc (DD),spinoff,2026-10-01,Financial Services,Shell Companies,68.26,首日收市價,72.53,77.39,6.26,-6.28,—
+2026-11-09,AIOK,Ai Okto Corp,Toro Corp (TORO),spinoff,2026-10-09,Energy,Oil & Gas Refining & Marketing,8.70,首日收市價,11.45,31.09,31.61,-63.17,距52週高 -63%
+2026-11-09,MSGR,Msg Rangers Corp,Msg Knickerbockers Corp (MSGK),spinoff,2026-10-27,Communication Services,Entertainment,177.61,首日收市價,244.08,249.35,37.42,-2.11,—
