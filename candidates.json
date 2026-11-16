@@ -1006,5 +1006,29 @@
     "type": "ipo",
     "list_date": "2026-08-18",
     "ref_price": 10.0
+  },
+  {
+    "ticker": "MDRN",
+    "name": "Modern Mining Technology Corp.",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-11-13",
+    "ref_price": 4.25
+  },
+  {
+    "ticker": "VVVV",
+    "name": "vVARDIS Holding AG",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-11-13",
+    "ref_price": 18.0
+  },
+  {
+    "ticker": "WWB",
+    "name": "Windward Bio Group AG",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-11-13",
+    "ref_price": 17.0
   }
 ]
