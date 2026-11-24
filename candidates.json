@@ -1030,5 +1030,13 @@
     "type": "ipo",
     "list_date": "2026-11-13",
     "ref_price": 17.0
+  },
+  {
+    "ticker": "ANT",
+    "name": "Anthropic, PBC",
+    "parent": "?",
+    "type": "ipo",
+    "list_date": "2026-11-19",
+    "ref_price": 83.0
   }
 ]
